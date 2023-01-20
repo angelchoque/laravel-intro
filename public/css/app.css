@@ -10899,3 +10899,13 @@ textarea.form-control-lg {
 .alert-dark {
   background-color: #303030;
 }
+.navbar img {
+    width: 1.2rem;
+}
+
+.welcome {
+    background: url("/img/background.jpg");
+    background-position: center center;
+    background-size: cover;
+}
+
