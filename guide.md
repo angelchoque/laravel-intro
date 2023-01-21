@@ -42,3 +42,19 @@ dark theme
     npm install bootswatch
 
 <https://github.com/thomaspark/bootswatch/>
+
+crear una tabla (migration) (create_nameplural_table)
+
+    php artisan make:migrate create_contacts_table
+    php artisan make:migrate
+
+hacer el modelo (name singular)
+
+    php artisan make:model Contact
+
+crear el cotrolador (con o sin modelo)
+
+    php artisan make:controller ContactController
+    php artisan make:controller -m Contact ContactController
+
+<https://laravel.com/docs/9.x/controllers>

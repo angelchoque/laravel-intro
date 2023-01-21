@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ContactController;
+use App\Models\Contact;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Response;
@@ -26,11 +28,17 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/contact', fn () => Response::view('contact'));
+// Route::get('/contact', fn () => Response::view('contact'));
 // Route::get('/contact', function () {
 //     return Response::view('contact');
 // });
 
-Route::post('/contact', function (Request $request) {
-    dd($request->get('phone_number'));
-});
+// Route::post('/contact', function (Request $request) {
+//     $data = $request->all();
+//     Contact::create($data);
+//     return "contact stored";
+//     // dd($request->get('phone_number'));
+// });
+
+Route::get('/contacts/create', [ContactController::class, 'create'])->name('contacts.create');
+Route::post('/contacts/', [ContactController::class, 'store'])->name('contacts.store');

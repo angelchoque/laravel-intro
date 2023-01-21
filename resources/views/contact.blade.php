@@ -8,8 +8,8 @@
           <div class="card-header">Create new Contact</div>
 
           <div class="card-body">
-            <form method="POST" action="/contact">
-              {{-- @csrf --}}
+            <form method="POST" action="{{ route('contacts.store') }}">
+              @csrf
 
               <div class="row mb-3">
                 <label for="name"
